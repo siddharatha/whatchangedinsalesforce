@@ -1,0 +1,12 @@
+<project name="Sample usage of Salesforce Ant tasks" default="retrieveUnpackaged" basedir="." xmlns:sf="antlib:com.salesforce">
+  <property file="build.properties"/>
+  <property environment="env"/>
+  
+  <target name="describeMetadata">
+    <sf:describeMetadata
+      username="${sf.username}"
+      password="${sf.password}"
+      serverurl="${sf.serverurl}"
+      resultFilePath="describe.log"/>
+  </target>
+</project>
